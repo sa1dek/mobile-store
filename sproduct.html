@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-----------------|Link Font Awesome Icon|----------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-----------------|Link Style CSS File|----------------->
+    <link rel="stylesheet" href="styles.css" />
+    <!-----------------|---------------|----------------->
+    <title>Information Product page</title>
+  </head>
+  <!-----------------|Script Update Cart Counter|----------------->
+  <script>
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const count = cart.reduce((total, item) => total + item.quantity, 0);
+
+      const badge = document.getElementById("cart-badge");
+      if (badge) badge.textContent = count;
+    }
+  </script>
+  <body>
+    <!--|Header Product Information Section|-->
+    <section id="header">
+      <a href="index.html">Mobile Store</a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><span id="cart-badge" class="cart-badge">0</span></a
+            >
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html" id="mobile-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-badge-mobile" class="cart-badge">0</span>
+        </a>
+        <i id="bar" class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </section>
+    <!-----------------|Product Information Section|----------------->
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="image/products/f1.jpg" width="100%" id="productImg" alt="" />
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img
+              src="image/products/f1.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="image/products/f2.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="image/products/f3.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="image/products/f4.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="single-pro-details">
+        <!-- <h6 id="">Home / T-Shirt</h6> -->
+        <h4 id="productName">Men's Fashion T Shirt</h4>
+        <h2 id="productPrice">130.00</h2>
+        <input type="number" id="productQty" value="1" />
+        <button class="normal" id="addToCartBtn">Add To Car</button>
+        <h4>Product Details</h4>
+        <span
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elis. Facings,
+          quasi repudiate? Dignissimos in capitate dicta quo maxine ex dolore
+          exedra amet lilo sit, provident cum verb Magnum dementia teeter,
+          repellendus exception quam? Solute, voluptatibus exercitation!
+          Quisquam vert Ill erigena common detects banditries cum rating quasi
+          ipso voluptuous. Sed, expedites vel.</span
+        >
+      </div>
+    </section>
+    <!-- Another Products Section -->
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection New Morden Design</p>
+      <div class="pro-container">
+        <!-- Card Products 1 -->
+        <div class="pro">
+          <img src="image/products/f1.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-Shirts</h5>
+            <div class="star"></div>
+            <h4>432</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <!-- Card Products 2 -->
+        <div class="pro">
+          <img src="image/products/f2.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-Shirts</h5>
+            <div class="star"></div>
+            <h4>432</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <!-- Card Products 3 -->
+        <div class="pro">
+          <img src="image/products/f3.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-Shirts</h5>
+            <div class="star"></div>
+            <h4>432</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <!-- Card Products 4 -->
+        <div class="pro">
+          <img src="image/products/f4.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-Shirts</h5>
+            <div class="star"></div>
+            <h4>432</h4>
+          </div>
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-----------------|New Letter Information Product Section|----------------->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sin up For NwsLetters</h4>
+        <p>Get Email <span>special offers.</span></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email Address" />
+        <button class="normal">Sign UP</button>
+      </div>
+    </section>
+    <!-----------------|Footer Information Product Section|----------------->
+    <footer class="section-p1">
+      <div class="col">
+        <!-- <img class="logo" src="image/logo.png" alt="" /> -->
+        <h4>Contact</h4>
+        <p><strong>Email: </strong></p>
+        <p><strong>Phone: </strong>+20103763234</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Private Policy</a>
+        <a href="#">Terms $ Conditions</a>
+        <a href="contact.html">Contact US</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
+    <!-----------------|---------------|----------------->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+        if (!product) return;
+
+        document.getElementById("productImg").src = product.image;
+        document.getElementById("productName").textContent = product.name;
+        document.getElementById("productPrice").textContent =
+          "EGP " + product.price;
+
+        const smallImgs = document.querySelectorAll(".small-img");
+        smallImgs[0].src = product.image;
+
+        smallImgs.forEach((img) => {
+          img.onclick = () => {
+            document.getElementById("productImg").src = img.src;
+          };
+        });
+        document.getElementById("addToCartBtn").onclick = () => {
+          let qty = parseInt(document.getElementById("productQty").value);
+
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const item = cart.find((p) => p.id === product.id);
+
+          if (item) {
+            item.quantity += qty;
+          } else {
+            cart.push({ ...product, quantity: qty });
+          }
+
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert("Product added to cart ✓");
+        };
+      });
+    </script>
+    <!-----------------|Link JS File|----------------->
+    <script src="sproduct.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

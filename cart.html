@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-----------------|Link Font Awesome Icon|----------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-----------------|Link Style CSS File|----------------->
+    <link rel="stylesheet" href="styles.css" />
+    <!-----------------|---------------|----------------->
+    <title>Cart Page</title>
+  </head>
+  <body>
+    <!-----------------|Header Cart Section|----------------->
+    <section id="header">
+      <a href="index.html">Mobile Store</a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><span id="cart-badge" class="cart-badge">0</span></a
+            >
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html" id="mobile-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-badge-mobile" class="cart-badge">0</span>
+        </a>
+        <i id="bar" class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </section>
+    <!-----------------|Hero Cart Section|----------------->
+    <section id="page-header" class="about-header">
+      <h2>#Cart</h2>
+      <p>Now! Finish Your Order</p>
+    </section>
+    <!-----------------|Cart Section|----------------->
+    <section id="cart" class="section-p1">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+          <!-- هنا الـ JS هيضيف المنتجات -->
+        </tbody>
+      </table>
+    </section>
+    <!-----------------|Cart Items Section|----------------->
+    <section id="cart-add" class="sectionp1">
+      <div id="cart-summary" class="">
+        <h3>Cart Total</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td id="subtotal">0</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong id="total">0</strong></td>
+          </tr>
+        </table>
+        <button class="normal" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </section>
+    <!-----------------|New Letter Cart Section|----------------->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sin up For NwsLetters</h4>
+        <p>Get Email <span>special offers.</span></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email Address" />
+        <button class="normal">Sign UP</button>
+      </div>
+    </section>
+    <!-----------------|Footer Cart Section|----------------->
+    <footer class="section-p1">
+      <div class="col">
+        <!-- <img class="logo" src="image/logo.png" alt="" /> -->
+        <h4>Contact</h4>
+        <p><strong>Email: </strong></p>
+        <p><strong>Phone: </strong>+20103763234</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Private Policy</a>
+        <a href="#">Terms $ Conditions</a>
+        <a href="contact.html">Contact US</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
+    <!-----------------|---------------|----------------->
+    <!-----------------|Link JS File|----------------->
+    <script src="script.js"></script>
+  </body>
+</html>
