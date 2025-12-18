@@ -385,3 +385,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", updateCartBadge);
+// =====================| Connecting the contact section to Google Sheets |=====================
+const contactScriptURL =
+  "https://script.google.com/macros/s/AKfycbx8bpvSQmQNHXHFEgVYF8pKU5UcagB1BzUh8eLc45W1BuaF2XJZO4WgVhobF3GQXPJn2Q/exec";
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+
+  if (!form) {
+    console.log("Contact form not found");
+    return;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(contactScriptURL, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        console.log("Server response:", data);
+        alert("تم إرسال الرسالة بنجاح ✅");
+        form.reset();
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
+        alert("حصل خطأ أثناء الإرسال ❌");
+      });
+  });
+});

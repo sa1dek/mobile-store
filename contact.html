@@ -77,14 +77,14 @@
     </section>
     <!-----------------|Form Contact Page|----------------->
     <section id="form-details">
-      <form action="">
+      <form id="contact-form">
         <span>Leave A Message.</span>
         <h2>We Love To Hear From You</h2>
-        <input type="text" placeholder="Full Name" />
-        <input type="text" placeholder="Phone" />
-        <input type="email" placeholder="Email" />
-        <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
-        <button class="normal">Submit.</button>
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="text" name="phone" placeholder="Phone" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit" class="normal">Submit</button>
       </form>
     </section>
     <!-----------------|New Letter Contact Section|----------------->
